@@ -347,6 +347,7 @@ body {
   color: #42464c;
   font-size: 1rem;
   line-height: 1.428571428571429;
+  position: absolute;
 }
 
 code {
@@ -6411,6 +6412,10 @@ a.panel-block:hover {
 }
 
 @media screen and (min-width: 980px) {
+  .section {
+    padding: 40px 40px;
+  }
+
   .section.is-medium {
     padding: 120px 20px;
   }
