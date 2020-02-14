@@ -127,11 +127,11 @@ The social menu icons will appear in the order you specify in the `platforms` ar
 Links can be added to the navbar (below the blog name and social links).
 There are two positions:
 
-- `[params.sections_left]` that will add links in the left side (under the blog title)
+- `[params.sections]` that will add links in the left side (under the blog title)
 - `[params.sections_right]` that will add links in the right side (under the social links)
 
 ```toml
-[params.sections_left]
+[params.sections]
 "/special-page" = "Special page"
 "https://example.com" = "Example"
 
