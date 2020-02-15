@@ -351,15 +351,14 @@ body {
   width:880px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 879px) {
   body {
-    width: 700px;
+    width: 100vw;
   }
 }
 
 @media screen and (max-width: 480px) {
   body {
-    width: 370px;
   }
 }
 
