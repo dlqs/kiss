@@ -6469,6 +6469,12 @@ html {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
 .content h1:not(:first-child),
 .content h2:not(:first-child),
 .content h3:not(:first-child),
