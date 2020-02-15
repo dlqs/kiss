@@ -348,6 +348,19 @@ body {
   font-size: 1rem;
   line-height: 1.428571428571429;
   position: absolute;
+  width:880px;
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 370px;
+  }
 }
 
 code {
@@ -6478,7 +6491,7 @@ html {
 
 @media screen and (max-width: 768px) {
   .container {
-    max-width: 320px;
+    max-width: 420px;
   }
 }
 
