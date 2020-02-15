@@ -2499,6 +2499,10 @@ a.box:active {
   color: #222324;
 }
 
+.title.not-active {
+  color: #bdbdbd;
+}
+
 .title code {
   display: inline-block;
   font-size: 28px;
@@ -4902,9 +4906,8 @@ a.box:active {
 }
 
 .nav-item a,
-a.nav-item,
-a.nav-item>.title {
-  color: #bdbdbd;
+a.nav-item {
+  color: #42464c;
 }
 
 .nav-item a.is-active,

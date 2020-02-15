@@ -7,7 +7,7 @@
         {{- $u := .URL -}}
 
         <a id="nav-anchor" class="nav-item" href="{{ .Site.BaseURL }}">
-          <h1 id="nav-heading" class='title is-4 {{ if eq ($firstUrlElement|lower) "/" }}is-active{{end}}'>Home</h1>
+          <h1 id="nav-heading" class='title is-4 {{ if ne ($firstUrlElement|lower) "/" }}not-active{{end}}'>Home</h1>
         </a>
 
         {{ if (isset .Site.Params "sections" ) }}
@@ -15,7 +15,7 @@
           {{- range $section, $printable := .Site.Params.sections -}}
           {{- if $printable -}}
           <a class="nav-item" href="{{ $section }}">
-            <h1 class="title is-4 {{ if eq ($firstUrlElement|lower) ($u|lower) }}is-active{{end}}">{{$printable}}</h1>
+            <h1 class="title is-4 {{ if ne ($firstUrlElement|lower) ($section|lower) }}not-active{{end}}">{{$printable}}</h1>
           </a>
           {{- end -}}
           {{- end -}}
