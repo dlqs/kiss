@@ -4883,6 +4883,10 @@ a.box:active {
   padding: 10px;
 }
 
+.nav-item:first-child {
+  padding-left: 0;
+}
+
 .nav-item a {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
