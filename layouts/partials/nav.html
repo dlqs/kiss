@@ -1,17 +1,14 @@
 <section class="section">
   <div class="container">
     <nav id="nav-main" class="nav">
-      <div id="nav-name" class="nav-left">
+      <div class="nav-left">
         {{ $currentNode := . }}
         {{- $firstUrlElement := print "/" (index (split .URL "/") 1) -}}
         {{- $u := .URL -}}
-
         <a id="nav-anchor" class="nav-item" href="{{ .Site.BaseURL }}">
           <h1 id="nav-heading" class='title is-4 {{ if ne ($firstUrlElement|lower) "/" }}not-active{{end}}'>Home</h1>
         </a>
-
         {{ if (isset .Site.Params "sections" ) }}
-        <div class="nav-left">
           {{- range $section, $printable := .Site.Params.sections -}}
           {{- if $printable -}}
           <a class="nav-item" href="{{ $section }}">
@@ -19,8 +16,24 @@
           </a>
           {{- end -}}
           {{- end -}}
-        </div>
         {{ end }}
+      </div>
+      <div class="nav-right">
+        <nav id="nav-items" class="nav-item level is-mobile">
+          {{- $social := ( .Site.Params.social ) -}}
+          {{- range $platform := $social.config.platforms -}}
+          {{- with $username := ( index $social $platform ) -}}
+          <a class="level-item" aria-label="{{ $platform }}"
+            href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class>
+                {{- partial "svg/icons" $platform -}}
+              </i>
+            </span>
+          </a>
+          {{- end -}}
+          {{- end -}}
+        </nav>
       </div>
     </nav>
   </div>
