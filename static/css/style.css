@@ -4902,14 +4902,16 @@ a.box:active {
 }
 
 .nav-item a,
-a.nav-item {
-  color: #42464c;
+a.nav-item,
+a.nav-item>.title {
+  color: #bdbdbd;
 }
 
 .nav-item a.is-active,
 .nav-item a:hover,
 a.nav-item.is-active,
-a.nav-item:hover {
+a.nav-item:hover,
+a.nav-item:hover>.title {
   color: #222324;
 }
 
