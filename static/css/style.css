@@ -4950,6 +4950,7 @@ a.nav-item.is-tab.is-active {
 
 @media screen and (max-width: 768px) {
   .nav-item {
+    padding-left: 0;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
@@ -5003,6 +5004,12 @@ a.nav-item.is-tab.is-active {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-left {
+    flex-direction: column;
+  }
 }
 
 .nav,
